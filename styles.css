@@ -1,0 +1,255 @@
+
+/* Reset some default styles */
+body, h1, p, ul {
+    margin: 10px;
+    padding: 1px;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+
+}
+
+a {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: right;
+}
+
+h2 {
+    padding: 5px;
+    margin-right: 100px;
+}
+
+header, nav, main, footer {
+    margin: 0px;
+    padding: 10px;
+    border: 0px solid black;
+    text-align: center;
+    line-height: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    max-width: 2000px;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav li:not(:last-child):after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: #7f7f7f;
+}
+
+nav a {
+    text-decoration: none;
+    color: #7f7f7f;
+}
+
+nav a.active {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+}
+
+.text-box {
+    flex: 1;
+    widht: 50%;
+    border: 0px solid black;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    text-align: justify;
+    line-height: 1;
+    height: auto;
+}
+
+.title-box {
+    widht: 50%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1;
+    padding-left: 20px;
+    padding-bottom: 00px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-grid-4x6 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.image-grid-4x6 img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 0px;
+    cursor: pointer;
+}
+
+.image-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.image-grid-3 img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.image-grid-2 img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.grid-item-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-itmes: center;
+}
+
+.image-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    text-align: centre;
+    margin: 0 auto;
+}
+
+.image-container {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-container_2 {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px; 
+}
+.image-container_2 img {
+    max-width: 50%;
+    height: auto;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0; /* Hide text content visually */
+    background: none;
+    border: none;
+    color: transparent; /* Make the arrow transparent */
+    cursor: pointer;
+}
+
+/* Ensure that the buttons are not in the tab order for screen readers */
+.prev-btn[aria-hidden="true"],
+.next-btn[aria-hidden="true"] {
+    display: none;
+}
+
+.pdf-link {
+    color: #7f7f7f;
+    text-decoration: none; 
+    font-weight: bold;
+    display: block;
+    text-align: right;
+}
+.small-square-box {
+    width: 350px; /* Adjust the width as needed */
+    background-color: none; /* Set the background color */
+    padding: 10px; /* Add some padding for content spacing */
+    border: 1px solid black; /* Add a border */
+    box-sizing: border-box; /* Include border and padding in the element's dimensions */
+    margin-top: 12px;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: flex-start;
+}
+
